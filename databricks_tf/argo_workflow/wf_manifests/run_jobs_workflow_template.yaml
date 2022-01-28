@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  name: run-jobs
+spec:
+  entrypoint: main
+  templates:
+    - name: main
+      container:
+        image: 'public.ecr.aws/t5a1x0i0/databricks_api:latest'
+        command: [sh, -c]
+        args: ['
+          ./run_jobs.sh $DATABRICKS_WS_URL $DATABRICKS_API_TOKEN 26
+        ']
+        env:
+        - name: DATABRICKS_API_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: databricks-ws-api-token
+              key: token
+        - name: DATABRICKS_WS_URL
+          valueFrom:
+            secretKeyRef:
+              name: databricks-ws-url
+              key: url

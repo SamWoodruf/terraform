@@ -1,0 +1,11 @@
+#!/bin/sh
+
+export CONFIG_EKS_CLUSTER_NAME="my_eks_cluster"
+export AWS_DEFAULT_REGION=us-east-2
+export KUBECONFIG="terraform/kubeconfig_kubeflow_cluster"
+echo "Used configuration:"
+echo "AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION"
+echo "AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID"
+echo "AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY"
+echo "AWS_SESSION_TOKEN:" $AWS_SESSION_TOKEN
+echo "CONFIG_EKS_CLUSTER_NAME: $CONFIG_EKS_CLUSTER_NAME"
