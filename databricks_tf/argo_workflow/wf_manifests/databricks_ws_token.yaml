@@ -3,4 +3,4 @@ kind: Secret
 metadata:
   name: databricks-ws-api-token
 data:
-  token: ZGFwaTg4NWYwNmU1NmQ3NjVmMWM3NjQ5NzVkZTlhYzQ4ODNh
+  token: <<your-token>>
