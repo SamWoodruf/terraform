@@ -22,7 +22,7 @@ variable "cidr_block" {
 }
 
 variable "region" {
-  default = "eu-west-1"
+  description = "Region to allocate AWS resources in"
 }
 
 variable "aws_access_key" {
@@ -50,4 +50,6 @@ variable "kubecontext" {
   type        = string
   description = "Current kubernetes context"
 }
-
+variable "databricks_cluster_policy_group" {
+  description = "Team that performs the work"
+}

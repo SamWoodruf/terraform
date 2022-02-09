@@ -8,3 +8,6 @@ variable "databricks_token" {
   description = "Databricks api token"
 }
 
+variable "policy_group" {
+  description = "Team that performs the work"
+}

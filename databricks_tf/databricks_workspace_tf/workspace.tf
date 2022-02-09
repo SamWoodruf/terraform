@@ -12,7 +12,7 @@ resource "databricks_mws_workspaces" "this" {
     comment = "Terraform"
   }
 }
-
+/*
 resource "kubernetes_secret" "databricks-ws-api-token" {
   metadata {
     name	= "databricks-ws-api-token"
@@ -30,7 +30,7 @@ resource "kubernetes_secret" "databricks-ws-url" {
     url         = databricks_mws_workspaces.this.workspace_url
   }
 }
-
+*/
 output "databricks_host" {
   value = databricks_mws_workspaces.this.workspace_url
 }

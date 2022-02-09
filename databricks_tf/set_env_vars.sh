@@ -1,7 +1,11 @@
 #!/bin/sh
 
 export AWS_DEFAULT_REGION=us-east-2
+export POLICY_OVERRIDES='{"type":"range", "maxValue":"1"}'
+export POLICY_GROUP=sam-policy
 echo "Used configuration:"
+echo "POLICY_GROUP: $POLICY_GROUP"
+echo "POLICY_OVERRIDES: $POLICY_OVERRIDES"
 echo "AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION"
 echo "AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID"
 echo "AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY"

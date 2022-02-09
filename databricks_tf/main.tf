@@ -16,6 +16,7 @@ module "databricks_cluster" {
   source                              = "./databricks_cluster_tf"
   databricks_host		      = module.databricks_workspace.databricks_host
   databricks_token                    = module.databricks_workspace.databricks_token 
+  policy_group                        = var.databricks_cluster_policy_group
 }
 
 output "databricks_host" {
